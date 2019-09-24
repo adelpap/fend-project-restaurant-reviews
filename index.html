@@ -13,6 +13,7 @@
 <body>
 
   <header>
+    <!-- A skip link that bypasses the map to help accessibillity -->
     <a class="skip-link" href="#filter-options">Skip to main content</a>
     <nav>
       <h1><a tabindex="0" href="/">Restaurant Reviews</a></h1>
@@ -42,6 +43,7 @@
       </div>
 
       <div class="restaurants">
+        <!-- create a live region for a screen reader, since the ul is not interactive but does get updated from the select options -->
       <ul id="restaurants-list" role="region" aria-live="polite" aria-atomic="true"></ul>
       </div>
 

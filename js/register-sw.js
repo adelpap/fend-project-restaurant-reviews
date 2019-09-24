@@ -1,6 +1,4 @@
-/*
-** Register service worker
-*/
+// Register service worker
 
 // if service worker is supported
 if(navigator.serviceWorker) {

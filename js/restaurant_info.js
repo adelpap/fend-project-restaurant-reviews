@@ -85,10 +85,12 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
+  // tabindex attribute of 0 to put focus on the address
   address.tabIndex = '0';
 
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img';
+  // add an alt attribute to the image with the restaurant name
   image.alt = `Image of ${restaurant.name}`;
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
 
@@ -111,6 +113,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
   hours.setAttribute('aria-label','restaurant-hours');
   for (let key in operatingHours) {
     const row = document.createElement('tr');
+    // tabindex attribute of 0 to put focus on the opening hours
     row.tabIndex = '0';
 
     const day = document.createElement('td');
@@ -132,6 +135,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h2');
   title.innerHTML = 'Reviews';
+  // tabindex attribute of 0 to put focus on the reviews section
   title.tabIndex = '0';
   container.appendChild(title);
 
@@ -158,7 +162,7 @@ createReviewHTML = (review) => {
   const name = document.createElement('p');
   name.innerHTML = review.name;
   li.appendChild(name);
-  // put focus on the review
+  // tabindex attribute of 0 to put focus on the review
   li.tabIndex = '0';
 
   const date = document.createElement('p');
